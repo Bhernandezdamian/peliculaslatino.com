@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Reproductor de Hotel Transilvania Transformanía</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Reproductor de Hotel Transilvania Transformanía">
+  <meta property="og:description" content="Espera 30 segundos para ver la película...">
+  <meta property="og:image" content="hotel transformania.jpeg"> <!-- Reemplaza con la URL de la imagen que deseas mostrar -->
+  <meta property="og:url" content="https://acortar.link/oI34J1"> <!-- Reemplaza con la URL de tu página -->
+  <link rel="icon" href="hotel transformania.jpeg" type="image/x-icon"> <!-- Reemplaza con la URL de la imagen que deseas como favicon -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="banner" class="banner">
+      <div id="message">Espera 30 segundos para ver la película...</div>
+      <div id="countdown">30</div>
+      <script type="text/javascript">
+        atOptions = {
+          'key' : 'e57d1d26b4749765051206be9479426b',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+        document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/e57d1d26b4749765051206be9479426b/invoke.js"></scr' + 'ipt>');
+      </script>
+    </div>
+
+    <div id="videoContainer" class="video-container">
+      <video id="video" controls autoplay>
+        <source src="https://ia902608.us.archive.org/13/items/hotel-transilvania-4-transfromania/Hotel%20Transilvania%204%20-%20Transfroman%C3%ADa.mp4" type="video/mp4">
+      </video>
+      <button id="fullscreenButton">Ver en pantalla completa</button>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var countdown = 30;
+
+    function updateCountdown() {
+      document.getElementById("countdown").textContent = countdown;
+      countdown--;
+
+      if (countdown < 0) {
+        document.getElementById("banner").style.display = "none";
+        var videoContainer = document.getElementById("videoContainer");
+        videoContainer.style.display = "block";
+
+        var fullscreenButton = document.getElementById("fullscreenButton");
+        fullscreenButton.addEventListener("click", function() {
+          var video = document.getElementById("video");
+          if (video.requestFullscreen) {
+            video.requestFullscreen();
+          } else if (video.mozRequestFullScreen) {
+            video.mozRequestFullScreen();
+          } else if (video.webkitRequestFullscreen) {
+            video.webkitRequestFullscreen();
+          } else if (video.msRequestFullscreen) {
+            video.msRequestFullscreen();
+          }
+        });
+      } else {
+        setTimeout(updateCountdown, 1000);
+      }
+    }
+
+    updateCountdown();
+
+    function changeBackgroundColor() {
+        var colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff']; // Array de colores
+        var body = document.querySelector('body'); // Elemento <body>
+        var randomColor = colors[Math.floor(Math.random() * colors.length)]; // Obtener un color aleatorio
+        body.style.backgroundColor = randomColor; // Cambiar el color de fondo del <body>
+      }
+      
+      setInterval(changeBackgroundColor, 1000); // Cambiar el color cada segundo (1000 milisegundos)
+  </script>
+</body>
+</html>

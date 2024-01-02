@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    overflow: hidden; /* Evitar el desplazamiento vertical */
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 40px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  .banner #message {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .banner #countdown {
+    font-size: 64px;
+  }
+  
+  .video-container {
+    display: none;
+    
+  }
+  
+  #fullscreenButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #fullscreenButton:hover {
+    background-color: #0056b3;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .banner {
+      width: 100%;
+      height: 100vh;
+      padding: 40px;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .banner #message {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    .banner #countdown {
+      font-size: 56px;
+      text-align: center;
+    }
+  }
+  
+  #fullscreenButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 40px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    /* Restricciones adicionales para el botón en dispositivos móviles */
+    #fullscreenButton {
+      font-size: 18px;
+      padding: 16px 32px;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
